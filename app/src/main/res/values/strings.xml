@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Trusted Friend</string>
+    <string name="server_client_id">858508900927-i6i02rm9h7sc02592iel52qm5dui8s5h.apps.googleusercontent.com</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDCptoAK4zbC5ytDmluUiDQ4M6rJYIcPB4</string>
+</resources>

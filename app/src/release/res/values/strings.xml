@@ -1,0 +1,3 @@
+<resources>
+    <string name="grpc_url">tf.jakecoffman.com:8888</string>
+</resources>

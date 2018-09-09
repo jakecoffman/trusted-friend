@@ -1,0 +1,4 @@
+<resources>
+    <!--when using localhost, use the IP instead of your machine-->
+    <string name="grpc_url">192.168.1.5:8888</string>
+</resources>

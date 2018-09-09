@@ -1,0 +1,90 @@
+syntax = "proto3";
+package pb;
+
+option java_multiple_files = true;
+option java_package = "com.jakecoffman.trustedfriend";
+option java_outer_classname = "TrustedFriendProto";
+option objc_class_prefix = "TF";
+
+service TrustedFriend {
+    rpc ListFriends(FriendsRequest) returns (FriendsResponse) {}
+    rpc RemoveFriend(RemoveFriendRequest) returns (RemoveFriendResponse) {}
+
+    rpc ListRequests(ListRequestsRequest) returns (ListRequestResponse) {}
+    rpc AddFriend(AddRequest) returns (AddResponse) {}
+
+    rpc ListLocations(ListLocationRequest) returns (ListLocationResponse) {}
+    rpc AskLocation(AskLocationRequest) returns (AskLocationResponse) {}
+    rpc MyLocation(MyLocationRequest) returns (MyLocationResponse) {}
+
+    rpc Alert(AlertRequest) returns (AlertResponse) {}
+    rpc Register(RegisterRequest) returns (RegisterResponse) {}
+}
+
+message FriendsRequest {}
+
+message FriendsResponse {
+    repeated Friend friends = 1;
+}
+
+message RemoveFriendRequest {
+    string friendId = 1;
+}
+message RemoveFriendResponse {}
+
+message ListRequestsRequest {}
+message ListRequestResponse {}
+
+message AddRequest {
+    string email = 1;
+}
+message AddResponse {}
+
+message ListLocationRequest {
+    string friendId = 1;
+}
+message ListLocationResponse {
+    repeated Location locations = 1;
+}
+
+message AskLocationRequest {
+    string friendId = 1;
+}
+message AskLocationResponse {}
+
+message MyLocationRequest {
+    string requestId = 1;
+    LatLng location = 2;
+}
+message MyLocationResponse {}
+
+message AlertRequest {
+    string friendId = 1;
+}
+message AlertResponse {}
+
+message RegisterRequest {
+    string token = 1;
+}
+message RegisterResponse {}
+
+message Friend {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    string picture = 4;
+}
+
+message Location {
+    string id = 1;
+    string from = 2;
+    string to = 3;
+    int64 requestDate = 4;
+    LatLng location = 5;
+    string geocode = 6;
+}
+
+message LatLng {
+    double latitude = 1;
+    double longitude = 2;
+}

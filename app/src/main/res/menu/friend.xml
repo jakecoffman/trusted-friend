@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_alert"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_warning_black_24dp"
+        android:title="Alert"/>
+    <item android:id="@+id/action_unfriend"
+        android:icon="@drawable/ic_mood_bad_black_24dp"
+        app:showAsAction="never"
+        android:title="Unfriend"/>
+    <item android:id="@+id/action_logout"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_logout"
+        android:title="Log-out" />
+</menu>
